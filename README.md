@@ -1,5 +1,9 @@
 # Week 11 — Attachment Board (Student Sample)
 
+render : https://webd-week11-sample-project.onrender.com
+
+github : https://github.com/shkim2104/WebD_week11_sample_project
+
 Spring Boot + Thymeleaf + JPA + MariaDB: 게시글 CRUD / 다중 첨부파일 업로드 / 다운로드
 
 ## 실행하기
