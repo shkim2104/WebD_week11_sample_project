@@ -32,4 +32,24 @@ public class Attachment {
     public String getStoredFilename() { return storedFilename; }
     public String getContentType() { return contentType; }
     public long getFileSize() { return fileSize; }
+
+    public String getReadableSize() {
+        if (fileSize >= 1024L * 1024) return String.format("%.2f MB", fileSize / (1024.0 * 1024));
+        if (fileSize >= 1024) return String.format("%.1f KB", fileSize / 1024.0);
+        return fileSize + " B";
+    }
+
+    public String getTypeLabel() {
+        if (contentType.startsWith("image/")) return "IMAGE";
+        if (contentType.equals("application/pdf")) return "PDF";
+        return "TXT";
+    }
+
+    public String getBadgeClass() {
+        return switch (getTypeLabel()) {
+            case "IMAGE" -> "text-bg-success";
+            case "PDF" -> "text-bg-danger";
+            default -> "text-bg-secondary";
+        };
+    }
 }

@@ -23,8 +23,9 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center"
                     th:each="file : ${post.attachments}">
                     <div>
+                        <span class="badge me-2" th:classappend="${file.badgeClass}" th:text="${file.typeLabel}">PDF</span>
                         <strong th:text="${file.originalFilename}">sample.pdf</strong>
-                        <small class="ms-2 text-secondary" th:text="${file.fileSize / 1024} + ' KB'">크기</small>
+                        <small class="ms-2 text-secondary" th:text="${file.readableSize}">크기</small>
                     </div>
                     <a class="btn btn-outline-primary btn-sm"
                        th:href="@{/attachments/{id}/download(id=${file.id})}">다운로드</a>
