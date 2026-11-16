@@ -33,6 +33,7 @@ public class Attachment {
     public String getContentType() { return contentType; }
     public long getFileSize() { return fileSize; }
 
+
     public String getReadableSize() {
         if (fileSize >= 1024L * 1024) return String.format("%.2f MB", fileSize / (1024.0 * 1024));
         if (fileSize >= 1024) return String.format("%.1f KB", fileSize / 1024.0);

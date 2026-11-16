@@ -36,7 +36,6 @@ public class PostController {
         model.addAttribute("postForm", new PostForm());
         return "posts/form";
     }
-
     @PostMapping("/posts")
     public String create(@Valid @ModelAttribute("postForm") PostForm form, BindingResult errors,
                          @RequestParam(name = "files", required = false) List<MultipartFile> files) {
