@@ -63,6 +63,9 @@ Spring Boot + Thymeleaf + JPA + MariaDB: 게시글 CRUD / 다중 첨부파일 �
             uuid를 사용하기 때문에 보안을 유지하기 위해서 사용합니다.
 
 
-## 바꾼 내용들
-    - Customizing
-        - 
+## 바꾼 내용들 
+ - Customizing
+    - ![초안](results/sample1.png) 
+    - ![css](results/sourcechange.png) 
+    - ![미리보기 기능 추가](results/miribogi.png)
+    - ![db 데이터 확인](results/dbcheck1.png)
